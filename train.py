@@ -50,6 +50,7 @@ if __name__ == "__main__":
                         initial_epoch=0,  # If you are continuing a interrupted section change here
                         callbacks=callbacks,
                         validation_data=valid_seq,
+                        validation_steps=1,
                         verbose=1)
     # Save final result
     model.save("./final_model.hdf5")
