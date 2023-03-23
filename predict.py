@@ -9,9 +9,9 @@ from datasets import ECGSequence
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Get performance on test set from hdf5')
-    parser.add_argument('path_to_hdf5', type=str,
+    parser.add_argument('--path_to_hdf5', type=str,
                         help='path to hdf5 file containing tracings')
-    parser.add_argument('path_to_model',  # or model_date_order.hdf5
+    parser.add_argument('--path_to_model',  # or model_date_order.hdf5
                         help='file containing training model.')
     parser.add_argument('--dataset_name', type=str, default='tracings',
                         help='name of the hdf5 dataset containing tracings')
