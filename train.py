@@ -37,8 +37,8 @@ if __name__ == "__main__":
     # If you are continuing an interrupted section, uncomment line bellow:
     #   model = keras.models.load_model(PATH_TO_PREV_MODEL, compile=False)
     model = get_model(train_seq.n_classes)
-    model.compile(loss=loss, optimizer=opt)
-    ## Sua de tinh do chinh xac:  model.compile(loss=loss, optimizer=opt, metrics = ["acc"])
+    #model.compile(loss=loss, optimizer=opt)
+    model.compile(loss=loss, optimizer=opt, metrics = ["acc"])
     # Create log
     callbacks += [TensorBoard(log_dir='./logs', write_graph=False),
                   CSVLogger('training.log', append=False)]  # Change append to true if continuing training
