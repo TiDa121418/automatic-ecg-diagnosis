@@ -68,7 +68,8 @@ class ECGSequence(tf.keras.utils.Sequence):
         if self.y is None:
             return np.array(self.x[start:end, :, :])
         else:
-            return np.array(self.x[start:end, :, :]), np.array(self.y[start:end])
+            #return np.array(self.x[start:end, :, :]), np.array(self.y[start:end])
+            return np.array(self.x[start:end, :, :]).astype(np.float64), np.array(self.y[start:end]).astype(np.float64)
 
     def __len__(self):
         """Number of batch in the Sequence.
